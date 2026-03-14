@@ -164,7 +164,7 @@ const HackingMinigame = ({ onComplete, onCancel }) => {
 
         <div className="border-t border-gray-800 pt-4 flex flex-col gap-4">
           <div className="text-[10px] text-gray-400 uppercase leading-relaxed text-center">
-            <span className="text-[#d4af37] font-bold">Instruction:</span> Identify and bypass security nodes. Each square reveals the proximity sensor percentage to lethal feedback modules. Avoid modules. 3 failures = session lockdown.
+            <span className="text-[#d4af37] font-bold">Instruction:</span> Identify and bypass security nodes. Each square reveals proximity to lethal modules (High % = Near). Avoid modules. 3 failures = lockdown.
           </div>
           
           <div className="flex gap-4">
