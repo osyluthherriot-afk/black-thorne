@@ -194,4 +194,85 @@ Cross-reference ARTIFACT_LOCATION_DATABASE, ABYSS_LOGISTICS_001. STATUS: ACTIVE 
     content: `Spy discovered attempting to access Archive Sub-Level B. Subject apprehended. Interrogation revealed ties to ████████. Subject subsequently executed per standard operating procedure. Clean-up crews deployed.`,
     redactedSections: [2], // Sentence 3
   },
+  // --- PROJECT NIGHTBRINGER LOGS (HIDDEN INITIALLY) ---
+  {
+    id: 'LOG-HIST-01',
+    date: '1182 DR',
+    title: 'Project Nightbringer: Initial Prospect Review',
+    classification: 'TOP SECRET / HISTORICAL',
+    declassifiedDate: null,
+    operationCode: 'PROJECT-NIGHTBRINGER',
+    keyLog: true,
+    isHidden: true,
+    content: `Initial contact established with target AA (Patriar class, Upper City).
+Subject possesses substantial financial resources and a disturbing lack of moral boundaries.
+Agent OH deployed to assess viability for Nightbringer integration.
+AA requests access to the ████████ ████ in exchange for funding.
+Recommendation: Deny request, offer alternative arcane boons.`,
+    redactedSections: [3],
+  },
+  {
+    id: 'LOG-HIST-02',
+    date: '1204 DR',
+    title: 'Funding Secured & Site Preparation',
+    classification: 'EYES ONLY / HISTORICAL',
+    declassifiedDate: null,
+    operationCode: 'PROJECT-NIGHTBRINGER',
+    keyLog: true,
+    isHidden: true,
+    content: `Patriar AA has officially transferred operational capital to unmarked accounts.
+Agent OH confirms the excavation beneath the family estate is proceeding.
+Workers reporting excessive lethargy and strange whisperings from the bedrock.
+Black Thorne protocol: quarantine the dig site, replace laborers with ██████ constructs.
+Nightbringer phase one is on schedule.`,
+    redactedSections: [3],
+  },
+  {
+    id: 'LOG-HIST-03',
+    date: '1221 DR',
+    title: 'Anomalous Readings at Estate Site',
+    classification: 'RESTRICTED / HISTORICAL',
+    declassifiedDate: null,
+    operationCode: 'PROJECT-NIGHTBRINGER',
+    keyLog: false,
+    isHidden: true,
+    content: `Agent OH reports fluctuating planar energy bleeding from AA's subterranean vault.
+Patriar AA insists the phenomenon is controlled and requests further esoteric components.
+Vessel containment integrity must be verified immediately.
+If Project Nightbringer breaches containment, Upper Baldur's Gate will suffer catastrophic reality failure.
+Agent OH authorized to terminate AA if compromise reaches 80%.`,
+    redactedSections: [],
+  },
+  {
+    id: 'LOG-HIST-04',
+    date: '1245 DR',
+    title: 'Agent OH Misconduct & Containment Adjustments',
+    classification: 'TOP SECRET / HISTORICAL',
+    declassifiedDate: null,
+    operationCode: 'NIGHTBRINGER-AUDIT',
+    keyLog: true,
+    isHidden: true,
+    content: `Internal audit reveals Agent OH has been heavily modified by the Nightbringer core.
+Agent OH's reports display erratic formatting and obsessive references to the "shadow beneath the gold".
+Patriar AA continues to fund the project despite total loss of the estate's domestic staff.
+Black Thorne intervention team dispatched to reinforce the ████████ seals.
+OH will remain onsite as a permanent, expendable observer.`,
+    redactedSections: [3],
+  },
+  {
+    id: 'LOG-HIST-05',
+    date: '1299 DR',
+    title: 'Project Nightbringer Dormancy Protocol',
+    classification: 'EYES ONLY / HISTORICAL',
+    declassifiedDate: null,
+    operationCode: 'PROJECT-NIGHTBRINGER',
+    keyLog: true,
+    isHidden: true,
+    content: `Centennial review of the Nightbringer apparatus.
+Patriar AA is presumed dead, though estate ledgers continue to authorize Black Thorne stipends automatically.
+Agent OH is entirely assimilated into the containment matrix; biological form highly degraded but functional.
+The entity slumbers. The investment yields acceptable arcane dividends.
+Site sealed. Monitoring reduced to passive ██████ surveillance unless active breach detected.`,
+    redactedSections: [4],
+  },
 ];

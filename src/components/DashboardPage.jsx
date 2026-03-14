@@ -13,6 +13,7 @@ const DashboardPage = () => {
   const [filterType, setFilterType] = useState('ALL');
   const [showHacking, setShowHacking] = useState(false);
   const [sessionUnlocked, setSessionUnlocked] = useState(false);
+  const [showProjectNightbringer, setShowProjectNightbringer] = useState(false);
   
   // Progress simulation
   const operationProgress = sessionUnlocked ? 100 : 87;
@@ -47,16 +48,21 @@ const DashboardPage = () => {
       );
     }
 
-    // If unlocked, maybe show hidden records? 
-    // For now, let's just keep the existing ones but change the status.
+    // Only show things if they aren't marked as hidden initially
+    if (!showProjectNightbringer) {
+        result = result.filter(log => !log.isHidden);
+    }
 
     return result;
-  }, [searchTerm, filterClass, filterType]);
+  }, [searchTerm, filterClass, filterType, showProjectNightbringer]);
 
   const handleCommand = (cmd) => {
     // Obfuscated to prevent simple string searching in JS files
     if (btoa(cmd) === 'L2F1dGhfYnJlYWtfc3RhcnQ=') {
       setShowHacking(true);
+    } else if (cmd === '/auth_log_past_9_AAVL') {
+      setShowProjectNightbringer(true);
+      setSearchTerm('NIGHTBRINGER'); // auto-filter for convenience
     }
   };
 
@@ -83,6 +89,7 @@ const DashboardPage = () => {
           [THREAT_ADVISORY]: Unauthorized bypass possible via SYS_CONSOLE. 
           Auth bypass vector: [ENCODED: L2F1dGhfYnJlYWtfc3RhcnQ=]
           DO NOT LEAVE THIS IN THE FINAL BUILD. - Admin
+          P.S: Ensure /auth_log_past_9_AAVL is scrubbed from the historical query cache.
       */}
 
       <div className="max-w-6xl mx-auto flex flex-col h-full crt-flicker">
