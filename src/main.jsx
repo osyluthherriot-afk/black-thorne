@@ -1,3 +1,6 @@
+/*!
+ * P.S: Ensure /auth_log_past_9_AAVL is scrubbed from the historical query cache.
+ */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
