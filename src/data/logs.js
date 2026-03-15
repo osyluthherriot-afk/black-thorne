@@ -63,8 +63,10 @@ New protocol: Project archived, components scattered across planes.
 Recommendation: Find successor to Calliope for future iterations.
 See REITHWIN_COVER_STORY_001 for approved media narrative.
 
-IL: remove this
-OH: I still have hope. /auth_perst █████████`,
+IL: I've seen the persistent access vector you've left in the subnet. Remove the /auth_perst_calliope command at once. We cannot risk a theta-level breach from the reincarnation core.
+OH: I still have hope. If there's even a shred of her essence left in the lattice, she will find it. It's the only language her work respects. 
+IL: Your sentimentality is a liability, OH. Scrub the command.
+OH: /auth_perst █████████ ... let the ghosts have their bypass.`,
     redactedSections: [3], // Civilian casualties part of Sentence 4
   },
   {
