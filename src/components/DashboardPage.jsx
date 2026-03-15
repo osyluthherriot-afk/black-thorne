@@ -13,7 +13,7 @@ const DashboardPage = () => {
   const [filterType, setFilterType] = useState('ALL');
   const [showHacking, setShowHacking] = useState(false);
   const [sessionUnlocked, setSessionUnlocked] = useState(false);
-  const [showProjectNightbringer, setShowProjectNightbringer] = useState(false);
+  const [unlockedCategories, setUnlockedCategories] = useState([]);
   
   // Progress simulation
   const operationProgress = sessionUnlocked ? 100 : 87;
@@ -48,21 +48,31 @@ const DashboardPage = () => {
       );
     }
 
-    // Only show things if they aren't marked as hidden initially
-    if (!showProjectNightbringer) {
-        result = result.filter(log => !log.isHidden);
-    }
+    // Only show things if they aren't marked as hidden initially, or if their category is unlocked
+    result = result.filter(log => !log.isHidden || unlockedCategories.includes(log.hiddenCategory));
 
     return result;
-  }, [searchTerm, filterClass, filterType, showProjectNightbringer]);
+  }, [searchTerm, filterClass, filterType, unlockedCategories]);
 
   const handleCommand = (cmd) => {
     // Obfuscated to prevent simple string searching in JS files
     if (btoa(cmd) === 'L2F1dGhfYnJlYWtfc3RhcnQ=') {
       setShowHacking(true);
     } else if (cmd === '/auth_log_past_9_AAVL') {
-      setShowProjectNightbringer(true);
+      if (!unlockedCategories.includes('NIGHTBRINGER')) setUnlockedCategories(prev => [...prev, 'NIGHTBRINGER']);
       setSearchTerm('NIGHTBRINGER'); // auto-filter for convenience
+    } else if (cmd === '/auth_log_past_love') {
+      if (!unlockedCategories.includes('LOVE')) setUnlockedCategories(prev => [...prev, 'LOVE']);
+      setSearchTerm('Unsent Transmission');
+    } else if (cmd === '/auth_log_past_27') {
+      if (!unlockedCategories.includes('27')) setUnlockedCategories(prev => [...prev, '27']);
+      setSearchTerm('Sanatorium Incident');
+    } else if (cmd === '/auth_log_past_devil') {
+      if (!unlockedCategories.includes('DEVIL')) setUnlockedCategories(prev => [...prev, 'DEVIL']);
+      setSearchTerm("Demon's Fane");
+    } else if (cmd === '/auth_log_past_msr') {
+      if (!unlockedCategories.includes('MSR')) setUnlockedCategories(prev => [...prev, 'MSR']);
+      setSearchTerm('Mass Shadow Ritual');
     }
   };
 
