@@ -1,9 +1,8 @@
 import React, { useState, useMemo } from 'react';
-import { LOGS, SECRET_LOG_CALLIOPE } from '../data/logs';
+import { LOGS, SECRET_LOG_CALLIOPE, LOG_VAN_MESSAGE, LOG_CASE_ALURE } from '../data/logs';
 import { useAuth } from '../context/AuthContext';
 import LogEntry from './LogEntry';
 import TerminalConsole from './TerminalConsole';
-import HackingMinigame from './HackingMinigame';
 
 const DashboardPage = () => {
   const { logout } = useAuth();
@@ -11,7 +10,6 @@ const DashboardPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterClass, setFilterClass] = useState('ALL');
   const [filterType, setFilterType] = useState('ALL');
-  const [showHacking, setShowHacking] = useState(false);
   const [sessionUnlocked, setSessionUnlocked] = useState(false);
   const [unlockedCategories, setUnlockedCategories] = useState([]);
   const [pendingCommand, setPendingCommand] = useState(null);
@@ -56,6 +54,12 @@ const DashboardPage = () => {
     if (unlockedCategories.includes('CALLIOPE')) {
       result.push(SECRET_LOG_CALLIOPE);
     }
+    if (unlockedCategories.includes('VAN')) {
+      result.push(LOG_VAN_MESSAGE);
+    }
+    if (unlockedCategories.includes('ALURE')) {
+      result.push(LOG_CASE_ALURE);
+    }
 
     return result;
   }, [searchTerm, filterClass, filterType, unlockedCategories]);
@@ -77,7 +81,11 @@ const DashboardPage = () => {
 
     // Obfuscated to prevent simple string searching in JS files
     if (btoa(cmd) === 'L2F1dGhfYnJlYWtfc3RhcnQ=') {
-      setShowHacking(true);
+      if (!unlockedCategories.includes('VAN')) setUnlockedCategories(prev => [...prev, 'VAN']);
+      setSearchTerm('SYSTEM OVERRIDE DETECTED');
+    } else if (cmd === '/auth_log_case_alure') {
+      if (!unlockedCategories.includes('ALURE')) setUnlockedCategories(prev => [...prev, 'ALURE']);
+      setSearchTerm('THE ALURE INCIDENT');
     } else if (cmd === '/auth_log_past_9_AAVL') {
       if (!unlockedCategories.includes('NIGHTBRINGER')) setUnlockedCategories(prev => [...prev, 'NIGHTBRINGER']);
       setSearchTerm('NIGHTBRINGER'); // auto-filter for convenience
@@ -268,13 +276,6 @@ const DashboardPage = () => {
       </div>
 
       <TerminalConsole onCommand={handleCommand} isPasswordMode={isPasswordMode} />
-      
-      {showHacking && (
-        <HackingMinigame 
-          onComplete={handleHackingSuccess} 
-          onCancel={() => setShowHacking(false)} 
-        />
-      )}
     </div>
   );
 };
