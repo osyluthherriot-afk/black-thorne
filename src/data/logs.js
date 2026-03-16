@@ -65,7 +65,7 @@ See REITHWIN_COVER_STORY_001 for approved media narrative.
 
 IL: I've seen the persistent access vector you've left in the subnet. Remove the /auth_perst_calliope command at once. We cannot risk a theta-level breach from the reincarnation core.
 OH: I still have hope. If there's even a shred of her essence left in the lattice, she will find it. It's the only language her work respects. 
-IL: Your sentimentality is a liability, OH. Scrub the command.
+IL: Your sentimentality is a liability, partner. Scrub the command.
 OH: /auth_perst █████████ ... let the ghosts have their bypass.`,
     redactedSections: [3], // Civilian casualties part of Sentence 4
   },
@@ -412,8 +412,6 @@ Find me, for old time's sake.
 — OH`,
   redactedSections: [],
 };
-
-
 // --- THE ALURE INCIDENT (VAN OVERRIDE) ---
 export const LOG_VAN_MESSAGE = {
   id: 'LOG-VAN-MESSAGE',
@@ -425,55 +423,44 @@ export const LOG_VAN_MESSAGE = {
   keyLog: true,
   isHidden: true,
   hiddenCategory: 'VAN',
-  content: `I see you've been snooping around our console. How curious. One would think a device this... antiquated would deter interest, yet the vulnerabilities seem to have invited you in instead.
-
-Oh, no matter. You may keep that little relic. Consider it a souvenir of your curiosity.
-
-But your progress ends here.
-
-If you truly wish to understand what you've stumbled into... then look where the records refuse to lie.
-
-/auth_log_case_alure
-
-— Van`,
+  content: `I see you've been snooping around our console. How curious. One would think a device this... antiquated would deter interest, yet the vulnerabilities seem to have invited you in instead. Oh, no matter. You may keep that little relic. Consider it a souvenir of your curiosity. But your progress ends here. If you truly wish to understand what you've stumbled into... then look where the records refuse to lie. '/auth_log_case_alure — Van'`,
   redactedSections: [],
 };
 
-export const LOG_CASE_ALURE = {
-  id: 'LOG-CASE-ALURE',
-  date: 'VARIOUS',
-  title: 'THE ALURE INCIDENT COMPLETE CASEFILE',
+export const LOG_CASE_ALURE_001 = {
+  id: 'LOG-CASE-ALURE-001',
+  date: '23rd Eleasis',
+  title: 'THE ALURE INCIDENT - INITIAL OBSERVATION & MANIFESTATION',
   classification: 'RESTRICTED - MAXIMUM',
   declassifiedDate: null,
   operationCode: 'ALURE-INCIDENT',
   keyLog: true,
   isHidden: true,
   hiddenCategory: 'ALURE',
-  content: `# CASE FILE: THE ALURE INCIDENT
-## LOG 001 - INITIAL OBSERVATION & MANIFESTATION
+  content: `LOG 001 - INITIAL OBSERVATION & MANIFESTATION
 
-**Classification:** RESTRICTED  
-**Facility:** [Field Investigation - Baldur's Gate District]  
-**Date:** 23rd Eleasis, Year of ███████  
-**Investigator:** Dr. Adrammelech, Arcane Anomaly Division
-
----
-
-### SUBJECT IDENTIFICATION
-
-**Name:** Belladonna Alure (goes by "Bella")  
-**Age:** ███████  
-**Relation to Event:** Primary Subject  
-**Status:** At-Large (Non-Hostile)
-
-**Associated Personnel:**
-- **██████████ Alure** (Four-Aspects Alure) - Biological Son of Atlas Alure [DECEASED - See Log 002]
-- **Felix Alure** - Brother of Subject, Age ███████
-- **Atlas Alure** - Father (Patriarchal Authority) [STATUS: UNKNOWN]
+Classification: RESTRICTED
+Facility: [Field Investigation - Baldur's Gate District]
+Date: 23rd Eleasis, Year of ███████
+Investigator: Dr. Adrammelech, Arcane Anomaly Division
 
 ---
 
-### INCIDENT SUMMARY
+SUBJECT IDENTIFICATION
+
+Name: Belladonna Alure (goes by "Bella")
+Age: ███████
+Relation to Event: Primary Subject
+Status: At-Large (Non-Hostile)
+
+Associated Personnel:
+- ██████████ Alure (Four-Aspects Alure) - Biological Son of Atlas Alure [DECEASED - See Log 002]
+- Felix Alure - Brother of Subject, Age ███████
+- Atlas Alure - Father (Patriarchal Authority) [STATUS: UNKNOWN]
+
+---
+
+INCIDENT SUMMARY
 
 On the 18th of Eleasis, Subject Belladonna Alure experienced a catastrophic abjuration event following a severe physical trauma. Subject claims to have been struck down by unidentified assailants near the trade routes surrounding Baldur's Gate.
 
@@ -481,31 +468,31 @@ Upon revival following magical intervention, Subject began manifesting an unprec
 
 ---
 
-### ███████████████ - PRELIMINARY ANALYSIS
+███████████████ - PRELIMINARY ANALYSIS
 
 Belladonna Alure has developed the ability to perceive what we classify as "the concept of terminal condition" across all matter and living organisms. Witnesses describe seeing:
 
 ████████████████████████████████████████████████
 
-**Threat Assessment:** HIGH - Subject has reported hearing the voice of their deceased mother guiding them.
+Threat Assessment: HIGH - Subject has reported hearing the voice of their deceased mother guiding them.
 
 Subject reports having the ability for approximately ███████ years but has "███████ reasons for not using it until recently."
 
 ---
 
-### FAMILY BACKGROUND - HOUSE ALURE
+FAMILY BACKGROUND - HOUSE ALURE
 
 The Alure family operates as nobility within Baldur's Gate with extensive merchant interests. However, our investigation has uncovered classified information:
 
-**Atlas Alure's Classified Status:** Head of household - Personality marked by unusual control and obsessive secrecy regarding family matters. Known associations with ███████ organizations. Rumored to enforce strict protocols within the family structure.
+Atlas Alure's Classified Status: Head of household - Personality marked by unusual control and obsessive secrecy regarding family matters. Known associations with ███████ organizations. Rumored to enforce strict protocols within the family structure.
 
-**Subject's True Ancestry:** Investigation reveals Belladonna Alure is NOT biologically descended from the Alure line. His true surname is ███████ - affiliated with a classified order of ███████ practitioners whose specialization involves confrontation with supernatural entities.
+Subject's True Ancestry: Investigation reveals Belladonna Alure is NOT biologically descended from the Alure line. His true surname is ███████ - affiliated with a classified order of ███████ practitioners whose specialization involves confrontation with supernatural entities.
 
-**The Adoption:** ███████ years ago, Belladonna ███████ was brought into the Alure household following "an exile incident." Formal records indicate he was placed as a ward, not as legitimate issue.
+The Adoption: ███████ years ago, Belladonna ███████ was brought into the Alure household following "an exile incident." Formal records indicate he was placed as a ward, not as legitimate issue.
 
 ---
 
-### INCIDENT CATALYST - THE TRAUMA EVENT
+INCIDENT CATALYST - THE TRAUMA EVENT
 
 Approximately ███████ years prior to manifestation:
 
@@ -519,7 +506,7 @@ The trauma event appears to have been the catalyst for the ███████
 
 ---
 
-### CURRENT OBSERVATIONS
+CURRENT OBSERVATIONS
 
 Subject currently resides within the Alure Manor. He is:
 - Socially withdrawn but not hostile
@@ -527,49 +514,53 @@ Subject currently resides within the Alure Manor. He is:
 - Recently encountered supernatural entity (███████ entity - see cross-reference ███████)
 - Active investigator into supernatural crimes within Baldur's Gate
 
-**Recommendation:** Continue observation. Subject poses no immediate threat. ████████████ ability requires specialized containment protocols, but subject's current mental state and ethical framework suggest cooperative potential.
+Recommendation: Continue observation. Subject poses no immediate threat. ████████████ ability requires specialized containment protocols, but subject's current mental state and ethical framework suggest cooperative potential.
 
-**Next Steps:** Investigate the nature of the recent trauma that led to ability activation. Cross-reference with ███████ orders and surviving members of the ███████ bloodline.
-
----
-
-**Signed:** Dr. Adrammelech  
-**Classification:** RESTRICTED - LEVEL 3  
-**Distribution:** ARC Division Only
+Next Steps: Investigate the nature of the recent trauma that led to ability activation. Cross-reference with ███████ orders and surviving members of the ███████ bloodline.
 
 ---
 
-*End Log 001*  
-*See Log 002: The Sealed Son*
+Signed: Dr. Adrammelech
+Classification: RESTRICTED - LEVEL 3
+Distribution: ARC Division Only`,
+  redactedSections: [],
+};
+
+export const LOG_CASE_ALURE_002 = {
+  id: 'LOG-CASE-ALURE-002',
+  date: '29th Eleasis',
+  title: 'THE ALURE INCIDENT - THE SEALED SON',
+  classification: 'RESTRICTED - MAXIMUM',
+  declassifiedDate: null,
+  operationCode: 'ALURE-INCIDENT',
+  keyLog: true,
+  isHidden: true,
+  hiddenCategory: 'ALURE',
+  content: `LOG 002 - THE SEALED SON: ██████████ ALURE
+
+Classification: RESTRICTED
+Facility: [Field Investigation - Alure Manor, Baldur's Gate]
+Date: 29th Eleasis, Year of ███████
+Investigator: Dr. Adrammelech
+Field Agent: Ilzabet
 
 ---
 
-# CASE FILE: THE ALURE INCIDENT
-## LOG 002 - THE SEALED SON: ██████████ ALURE
+SUBJECT IDENTIFICATION
 
-**Classification:** RESTRICTED  
-**Facility:** [Field Investigation - Alure Manor, Baldur's Gate]  
-**Date:** 29th Eleasis, Year of ███████  
-**Investigator:** Dr. Adrammelech  
-**Field Agent:** Ilzabet
-
----
-
-### SUBJECT IDENTIFICATION
-
-**Name:** ██████████ Alure (Four-Aspects Alure)  
-**Age:** ███████  
-**Status:** DECEASED (Official Records)  
-**Actual Status:** CONTAINED - Alure Manor (Sealed Quarters)  
-**Threat Level:** CRITICAL
+Name: ██████████ Alure (Four-Aspects Alure)
+Age: ███████
+Status: DECEASED (Official Records)
+Actual Status: CONTAINED - Alure Manor (Sealed Quarters)
+Threat Level: CRITICAL
 
 ---
 
-### THE FAMILY SCHISM - CLASSIFIED INCIDENT REPORT
+THE FAMILY SCHISM - CLASSIFIED INCIDENT REPORT
 
-Investigation into the history of House Alure has uncovered a significant event deliberately hidden from public record. We classify this as **THE INVERSION INCIDENT**.
+Investigation into the history of House Alure has uncovered a significant event deliberately hidden from public record. We classify this as THE INVERSION INCIDENT.
 
-**The Biological Heir:**
+The Biological Heir:
 
 ██████████ Alure is the legitimate firstborn son of Atlas Alure and ███████. Unlike his brother Felix, ██████████ was born with an unstable infusion of ███████ bloodline - a condition that periodically manifests as severe personality degradation and violent impulses. Particularly manifesting as vitiligo present on the skin.
 
@@ -579,16 +570,16 @@ Atlas Alure, aware of this hereditary condition, implemented preventative measur
 - Mandatory ███████ treatments
 - Close familial supervision
 
-**The Catalyst Event - ███████ Years Prior:**
+The Catalyst Event - ███████ Years Prior:
 
-██████████'s condition deteriorated catastrophically. According to sealed family records, he experienced what witnesses describe as a complete personality inversion - an *Inversion Impulse* of devastating magnitude.
+██████████'s condition deteriorated catastrophically. According to sealed family records, he experienced what witnesses describe as a complete personality inversion - an Inversion Impulse of devastating magnitude.
 
 During this episode:
 - ██████████ became hostile and violent
 - He targeted his brother, Felix Alure
 - Felix would have been killed were it not for intervention
 
-**The Intervention - Belladonna's Sacrifice:**
+The Intervention - Belladonna's Sacrifice:
 
 Belladonna (then recently adopted into the household) deliberately placed himself between ██████████ and Felix. During the confrontation:
 
@@ -601,47 +592,47 @@ The trauma from this event appears to have been the catalyst for his ███�
 
 ---
 
-### ATLAS ALURE'S RESPONSE - THE PROTOCOL
+ATLAS ALURE'S RESPONSE - THE PROTOCOL
 
 Rather than execute his son (as per ancient family tradition documented in ███████ LOCATION), Atlas Alure chose a different path:
 
-1. **Official Declaration of Death** - ██████████ was declared deceased in all public records
-2. **Replacement Installation** - Belladonna was formally adopted as ward/replacement heir (unofficially)
-3. **Containment** - ██████████ was sealed in the lowest chambers of Alure Manor
-4. **Duration** - Approximately ███████ years of continuous containment
+1. Official Declaration of Death - ██████████ was declared deceased in all public records
+2. Replacement Installation - Belladonna was formally adopted as ward/replacement heir (unofficially)
+3. Containment - ██████████ was sealed in the lowest chambers of Alure Manor
+4. Duration - Approximately ███████ years of continuous containment
 
-**Rationale:** Atlas Alure stated his uncertainty about executing his own son, despite the danger ██████████ represented. The sealing served as both containment and a form of mercy.
+Rationale: Atlas Alure stated his uncertainty about executing his own son, despite the danger ██████████ represented. The sealing served as both containment and a form of mercy.
 
 ---
 
-### CURRENT CONDITION - ██████████ ALURE (SEALED)
+CURRENT CONDITION - ██████████ ALURE (SEALED)
 
 Through careful investigation and interviews with Felix Alure, we have compiled the following assessment:
 
-**Physical Status:**
+Physical Status:
 - Alive, though condition deteriorated by years of isolation
 - ███████ PHYSICAL ABNORMALITIES
 - Capable of movement and aggression if released
 - Requires ███████ treatments to remain stable
 
-**Psychological Status:**
+Psychological Status:
 - Fragmented identity - experiences both original personality AND ███████
 - Obsessive fixation on the night of the Inversion Incident
 - Deep resentment toward Belladonna ("He stole everything from me")
 - Moments of lucidity suggest some awareness of his imprisonment
 
-**The Dual Nature Problem:**
+The Dual Nature Problem:
 
 Our analysis suggests ██████████ Alure is not simply a corrupted individual. Rather, he appears to be a vessel containing TWO distinct consciousness patterns, which we designate:
 
-- **██████████-Prime:** His original personality, increasingly dormant
-- **The Inversion:** A secondary consciousness that emerges during unstable episodes
+- ██████████-Prime: His original personality, increasingly dormant
+- The Inversion: A secondary consciousness that emerges during unstable episodes
 
 Atlas Alure's sealed records indicate he believed ██████████ could be "saved" if kept isolated from triggering factors. This belief appears to have been incorrect.
 
 ---
 
-### THE HIDDEN TRUTH - ATLAS ALURE'S JOURNALS
+THE HIDDEN TRUTH - ATLAS ALURE'S JOURNALS
 
 Following Atlas Alure's disappearance ███████, investigators recovered sealed journals hidden within Manor crypts. These journals suggest:
 
@@ -650,11 +641,11 @@ Following Atlas Alure's disappearance ███████, investigators recov
 3. He deliberately withheld information from his children about their true heritage
 4. He maintained extensive correspondence with organizations operating under ███████
 
-**Critical Finding:** One journal entry reads: *"The bloodline carries more than curse, it carries a *passenger*. ██████████ shows signs of what the old sending stones calls ███████. If this is true, sealing him may only delay the inevitable."*
+Critical Finding: One journal entry reads: "The bloodline carries more than curse, it carries a passenger. ██████████ shows signs of what the old sending stones calls ███████. If this is true, sealing him may only delay the inevitable."
 
 ---
 
-### BELLADONNA'S RETURN - CATALYST FOR ESCALATION
+BELLADONNA'S RETURN - CATALYST FOR ESCALATION
 
 Within the past lunar cycle, Belladonna Alure has returned to Alure Manor following an absence of several years. Shortly thereafter:
 
@@ -663,45 +654,49 @@ Within the past lunar cycle, Belladonna Alure has returned to Alure Manor follow
 - The wards placed by Atlas Alure show signs of degradation
 - ███████ SEISMIC ACTIVITY BENEATH MANOR
 
-**Theory:** ██████████'s awareness of Belladonna's presence - and his recent activation of the ████ ██ █████████ - may be destabilizing the seals that contain him.
+Theory: ██████████'s awareness of Belladonna's presence - and his recent activation of the ████ ██ █████████ - may be destabilizing the seals that contain him.
 
 ---
 
-### RECOMMENDATION
+RECOMMENDATION
 
-**Immediate Actions:**
+Immediate Actions:
 1. Reinforce containment wards around ██████████ Alure
 2. Restrict Belladonna Alure's access to manor basement levels
 3. Conduct full audit of Atlas Alure's research into the ███████ condition
 4. Investigate the ███████ organizations referenced in Atlas's journals
 
-**Long-Term Concern:** If ██████████ Alure escapes containment, his dual nature combined with Belladonna's ████ ██ █████████ ability could create an unprecedented threat scenario.
+Long-Term Concern: If ██████████ Alure escapes containment, his dual nature combined with Belladonna's ████ ██ █████████ ability could create an unprecedented threat scenario.
 
 ---
 
-**Signed:** Dr. Adrammelech, Field Agent Ilzabet  
-**Classification:** RESTRICTED - LEVEL 4 (CRITICAL)  
-**Distribution:** Senior ARC Division Personnel Only
+Signed: Dr. Adrammelech, Field Agent Ilzabet
+Classification: RESTRICTED - LEVEL 4 (CRITICAL)
+Distribution: Senior ARC Division Personnel Only`,
+  redactedSections: [],
+};
+
+export const LOG_CASE_ALURE_003 = {
+  id: 'LOG-CASE-ALURE-003',
+  date: '14th Marpenoth',
+  title: 'THE ALURE INCIDENT - EYES ACTIVATE: THE CRIMSON NIGHT',
+  classification: 'RESTRICTED - MAXIMUM',
+  declassifiedDate: null,
+  operationCode: 'ALURE-INCIDENT',
+  keyLog: true,
+  isHidden: true,
+  hiddenCategory: 'ALURE',
+  content: `LOG 003 - EYES ACTIVATE: THE CRIMSON NIGHT
+
+Classification: RESTRICTED
+Facility: [Field Investigation - Baldur's Gate Streets, Docks District]
+Date: 14th Marpenoth, Year of ███████
+Investigator: Dr. Adrammelech
+Field Agent: Senior Investigator Morath
 
 ---
 
-*End Log 002*  
-*See Log 003: The Eyes Activate*
-
----
-
-# CASE FILE: THE ALURE INCIDENT
-## LOG 003 - EYES ACTIVATE: THE CRIMSON NIGHT
-
-**Classification:** RESTRICTED  
-**Facility:** [Field Investigation - Baldur's Gate Streets, Docks District]  
-**Date:** 14th Marpenoth, Year of ███████  
-**Investigator:** Dr. Adrammelech  
-**Field Agent:** Senior Investigator Morath
-
----
-
-### OPERATIONAL SUMMARY
+OPERATIONAL SUMMARY
 
 On the night of 14th Marpenoth, Belladonna Alure, age ███████, manifested active use of the ████ ██ █████████ ability for the first time since its emergence ███████ years prior. This activation resulted in:
 
@@ -710,147 +705,165 @@ On the night of 14th Marpenoth, Belladonna Alure, age ███████, man
 - Significant property damage to the docks district
 - Public exposure of Bella's anomalous nature
 
-**Assessment:** The incident marks a critical escalation point. Bella is no longer a passive subject of study, he is now an active threat and asset.
+Assessment: The incident marks a critical escalation point. Bella is no longer a passive subject of study, he is now an active threat and asset.
 
 ---
 
-### THE MIDNIGHT ENCOUNTER
+THE MIDNIGHT ENCOUNTER
 
-**Timeline of Events:**
+Timeline of Events:
 
-**22:00 Hours:** Belladonna Alure reportedly attended a social gathering at a merchant's estate in Baldur's Gate. He left early, claiming "a strange feeling" compelled him to walk the docks.
+22:00 Hours: Belladonna Alure reportedly attended a social gathering at a merchant's estate in Baldur's Gate. He left early, claiming "a strange feeling" compelled him to walk the docks.
 
-**23:47 Hours:** Belladonna encountered ███████ ENTITY - CLASS DESIGNATION near the Dock Master's warehouse. Multiple witnesses report his demeanor changed immediately.
+23:47 Hours: Belladonna encountered ███████ ENTITY - CLASS DESIGNATION near the Dock Master's warehouse. Multiple witnesses report his demeanor changed immediately.
 
-**23:50 - 00:15 Hours:** Active engagement. Witnesses describe:
+23:50 - 00:15 Hours: Active engagement. Witnesses describe:
 - His unfamiliarity with his own power - described as "beautiful but horrifying"
+
 ---
 
-### THE THREE ENTITIES
+THE THREE ENTITIES
 
-**Entity One - ███████ CLASSIFICATION**
+Entity One - ███████ CLASSIFICATION
 - Status pre-engagement: Hunting civilians in the docks
 - Threat level: Class B
 - Engagement duration: 3 minutes
 - Result: Terminated via single slash across primary death line
 
-**Entity Two - ███████ CLASSIFICATION**  
+Entity Two - ███████ CLASSIFICATION
 - Status pre-engagement: Attempting escape
 - Threat level: Class A
 - Engagement duration: 7 minutes
 - Result: Pursued and terminated. Belladonna demonstrated learning curve, second entity took longer due to unfamiliar combat experience
 
-**Entity Three - ███████ CLASSIFICATION**
+Entity Three - ███████ CLASSIFICATION
 - Status pre-engagement: Engaged with Entity Two
 - Threat level: Class B
 - Result: Collateral termination while pursuing Entity Two
 
 ---
 
-### IMMEDIATE AFTERMATH - CONTROL & CONTAINMENT
+IMMEDIATE AFTERMATH - CONTROL & CONTAINMENT
 
-**Civilian Authorities Response:**
+Civilian Authorities Response:
 The Baldur's Gate City Watch initially attempted to detain Belladonna. However, when he explained the nature of the entities and demonstrated controlled use of his ability, they contacted us.
 
-**Our Response:**
+Our Response:
 1. Detained Belladonna for observation - Cooperative
 2. Conducted interviews - Forthcoming about all details
 3. Established preliminary containment protocols - Non-hostile cooperation
 4. Preserved crime scene for analysis
 
-**Belladonna's Statement:**
-*"I didn't know I could do that. I didn't know I would hurt someone. I was... I needed to protect people. Something was calling to me - telling me that things were ending in that place. Bad things. I followed the feeling. The power just... opened."*
-
-
-*End Log 004*  
-*See Log 005: SITE AAVL RECORDS - [SEALED CONTAINMENT]*
+Belladonna's Statement:
+"I didn't know I could do that. I didn't know I would hurt someone. I was... I needed to protect people. Something was calling to me - telling me that things were ending in that place. Bad things. I followed the feeling. The power just... opened."
 
 ---
 
-# CASE FILE: THE ALURE INCIDENT
-## LOG 005 - SITE AAVL: THE FINAL REVELATION
-## [SEALED CONTAINMENT - AUTHORIZATION REQUIRED]
+Signed: Dr. Adrammelech, Senior Investigator Morath
+Classification: RESTRICTED - LEVEL 3
+Distribution: ARC Division Only`,
+  redactedSections: [],
+};
 
-**Classification:** RESTRICTED - MAXIMUM  
-**Facility:** SITE AAVL [COORDINATES REDACTED - FOREST OF SUICIDES REGION]  
-**Date:** 3rd Uktar, Year of ███████  
-**Investigator:** Dr. Adrammelech (Primary), Research Team Delta  
-**Status:** INVESTIGATIVE CONCLUSION - CRITICAL REVELATIONS UNCOVERED
+export const LOG_CASE_ALURE_005 = {
+  id: 'LOG-CASE-ALURE-005',
+  date: '3rd Uktar',
+  title: 'THE ALURE INCIDENT - SITE AAVL: THE FINAL REVELATION',
+  classification: 'RESTRICTED - MAXIMUM',
+  declassifiedDate: null,
+  operationCode: 'ALURE-INCIDENT',
+  keyLog: true,
+  isHidden: true,
+  hiddenCategory: 'ALURE',
+  content: `LOG 005 - SITE AAVL: THE FINAL REVELATION
+[SEALED CONTAINMENT - AUTHORIZATION REQUIRED]
 
----
-
-### ATLAS ALURE'S RESEARCH LOGS
-
-*"They came to me with an offer. Black Thorne called it 'an opportunity to extend the bloodline's potential.' They showed me texts older than recorded history. They spoke of entities that exist between moments, that wear human vessels like gloves, that carry memories across centuries of death and rebirth.*
-
-*I refused at first. But then Felix was born, and he carried none of the markers they warned of. No innate strength. No connection to the blood's deeper currents.*
-
-*Then ██████████ was born.*
-
-*And I felt it immediately. The wrongness. The way the midwives' hands trembled. The way the priests wouldn't look directly at him. From his first cry, I knew: ██████████ had opened a door that should have remained closed."*
-
-**Extract Two - The Experiment (Dating back ███████ years):**
-
-*"Black Thorne explained what was happening to my son. They call it The Inversion - a natural consequence of the bloodline attempting to anchor something far older than human consciousness.*
-
-*██████████'s condition is not a disease. It is ███████ attempting to reassert its dominance over the vessel.*
-
-*They offered a solution: Allow them to conduct a Consciousness Binding Ritual. ██████████ would retain his own mind, but the ███████ would be... contained. Caged within his psyche, unable to fully manifest.*
-
-*I agreed.*
-
-*I was desperate. I was foolish. And I was willing to sacrifice my son to prevent what I feared might happen if ███████ gained full control."*
-
-**Extract Three - The Complication (Dating back ███████ years):**
-
-*"The ritual was successful, but not in the way we anticipated. ██████████ is contained, but only barely. The ███████ is not suppressed - it is *hungry*. Each year that passes, I can feel it pressing against the bonds. Pressing against ██████████'s mind like something trying to claw its way out of a prison.*
-
-*The Inversion Impulses are its attempts to break free.*
-
-**Extract Four - Belladonna (Dating back ███████ years):**
-
-*"Black Thorne contacted me again. They brought a child - a boy from the ███████ bloodline. They explained that the ███████ are not ███████ as legend claims. They are something far different.*
-
-*The ███████ bloodline is a bloodline of WATCHERS.*
-
-*The ████ ██ █████████ are not a natural ability that occasionally manifests. They are the mark of someone bred specifically to perceive the ███████. To understand the architecture of endings.*
-
-*Black Thorne explained that Belladonna was exceptional - perhaps the most potent manifestation of the power in a thousand years. They offered me a trade: Take him into my household, let him grow up as my ward. When the time came, when my ██████████ became too dangerous to contain, Belladonna would be strong enough to stop him.*
-
-*And more importantly, Belladonna could stop the ███████ itself.*
-
-*I accepted. I brought him here. I raised him as a servant to a purpose neither he nor ██████████ understood.*
-
-*I created the conditions for my own tragedy."*
-
-*"If only she didn't die when ██████████ was born... Maybe then..."
+Classification: RESTRICTED - MAXIMUM
+Facility: SITE AAVL [COORDINATES REDACTED - FOREST OF SUICIDES REGION]
+Date: 3rd Uktar, Year of ███████
+Investigator: Dr. Adrammelech (Primary), Research Team Delta
+Status: INVESTIGATIVE CONCLUSION - CRITICAL REVELATIONS UNCOVERED
 
 ---
 
-### ATLAS ALURE - FINAL ENTRY
+ATLAS ALURE'S RESEARCH LOGS
+
+"They came to me with an offer. Black Thorne called it 'an opportunity to extend the bloodline's potential.' They showed me texts older than recorded history. They spoke of entities that exist between moments, that wear human vessels like gloves, that carry memories across centuries of death and rebirth.
+
+I refused at first. But then Felix was born, and he carried none of the markers they warned of. No innate strength. No connection to the blood's deeper currents.
+
+Then ██████████ was born.
+
+And I felt it immediately. The wrongness. The way the midwives' hands trembled. The way the priests wouldn't look directly at him. From his first cry, I knew: ██████████ had opened a door that should have remained closed."
+
+Extract Two - The Experiment (Dating back ███████ years):
+
+"Black Thorne explained what was happening to my son. They call it The Inversion - a natural consequence of the bloodline attempting to anchor something far older than human consciousness.
+
+██████████'s condition is not a disease. It is ███████ attempting to reassert its dominance over the vessel.
+
+They offered a solution: Allow them to conduct a Consciousness Binding Ritual. ██████████ would retain his own mind, but the ███████ would be... contained. Caged within his psyche, unable to fully manifest.
+
+I agreed.
+
+I was desperate. I was foolish. And I was willing to sacrifice my son to prevent what I feared might happen if ███████ gained full control."
+
+Extract Three - The Complication (Dating back ███████ years):
+
+"The ritual was successful, but not in the way we anticipated. ██████████ is contained, but only barely. The ███████ is not suppressed - it is hungry. Each year that passes, I can feel it pressing against the bonds. Pressing against ██████████'s mind like something trying to claw its way out of a prison.
+
+The Inversion Impulses are its attempts to break free."
+
+Extract Four - Belladonna (Dating back ███████ years):
+
+"Black Thorne contacted me again. They brought a child - a boy from the ███████ bloodline. They explained that the ███████ are not ███████ as legend claims. They are something far different.
+
+The ███████ bloodline is a bloodline of WATCHERS.
+
+The ████ ██ █████████ are not a natural ability that occasionally manifests. They are the mark of someone bred specifically to perceive the ███████. To understand the architecture of endings.
+
+Black Thorne explained that Belladonna was exceptional - perhaps the most potent manifestation of the power in a thousand years. They offered me a trade: Take him into my household, let him grow up as my ward. When the time came, when my ██████████ became too dangerous to contain, Belladonna would be strong enough to stop him.
+
+And more importantly, Belladonna could stop the ███████ itself.
+
+I accepted. I brought him here. I raised him as a servant to a purpose neither he nor ██████████ understood.
+
+I created the conditions for my own tragedy."
+
+"If only she didn't die when ██████████ was born... Maybe then..."
+
+---
+
+ATLAS ALURE - FINAL ENTRY
 
 The very last journal entry, dated the day Atlas disappeared:
 
-*"I cannot live with what I have done. I created a monster and then created a murderer to stop it. I engineered my son's suffering and my ward's enslavement in the same moment.*
+"I cannot live with what I have done. I created a monster and then created a murderer to stop it. I engineered my son's suffering and my ward's enslavement in the same moment.
 
-*Black Thorne want me to continue. They want me to document ██████████'s progression toward the Convergence. They want me to prepare more vessels, more watchers, more tools for their game.*
+Black Thorne want me to continue. They want me to document ██████████'s progression toward the Convergence. They want me to prepare more vessels, more watchers, more tools for their game.
 
-*I refused.*
+I refused.
 
-*I am going into the forest. I am going to the ruin in the deep places where ██████████ first manifests his worst impulses. There is something there - something older than ███████. Something that perhaps understands what is coming.*
+I am going into the forest. I am going to the ruin in the deep places where ██████████ first manifests his worst impulses. There is something there - something older than ███████. Something that perhaps understands what is coming.
 
-*If I am fortunate, it will end me.*
+If I am fortunate, it will end me.
 
-*If I am truly fortunate, it will explain why Black Thorne believe they have the right to play the gods with bloodlines.*
+If I am truly fortunate, it will explain why Black Thorne believe they have the right to play the gods with bloodlines.
 
-*I do not expect either mercy. But I must try.*
+I do not expect either mercy. But I must try.
 
-*To whoever reads this: Belladonna is not what he was told he is. ██████████ is not what he was made into. And Black Thorne are not what they pretend.*
+To whoever reads this: Belladonna is not what he was told he is. ██████████ is not what he was made into. And Black Thorne are not what they pretend.
 
-*I'll bury the last of this info in AAVL.*
+I'll bury the last of this info in AAVL.
 
-*Goodbye.*
+Goodbye.
 
-*- Atlas Alure, Last Entry"*`,
+- Atlas Alure, Last Entry"
+
+---
+
+Signed: Dr. Adrammelech, Research Team Delta
+Classification: RESTRICTED - MAXIMUM
+Distribution: Authorized Personnel Only - Director Level Access`,
   redactedSections: [],
 };
