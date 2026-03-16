@@ -425,7 +425,7 @@ export const LOG_VAN_MESSAGE = {
   keyLog: true,
   isHidden: true,
   hiddenCategory: 'VAN',
-  content: \`I see you've been snooping around our console. How curious. One would think a device this... antiquated would deter interest, yet the vulnerabilities seem to have invited you in instead.
+  content: `I see you've been snooping around our console. How curious. One would think a device this... antiquated would deter interest, yet the vulnerabilities seem to have invited you in instead.
 
 Oh, no matter. You may keep that little relic. Consider it a souvenir of your curiosity.
 
@@ -435,7 +435,7 @@ If you truly wish to understand what you've stumbled into... then look where the
 
 /auth_log_case_alure
 
-— Van\`,
+— Van`,
   redactedSections: [],
 };
 
@@ -449,7 +449,7 @@ export const LOG_CASE_ALURE = {
   keyLog: true,
   isHidden: true,
   hiddenCategory: 'ALURE',
-  content: \`# CASE FILE: THE ALURE INCIDENT
+  content: `# CASE FILE: THE ALURE INCIDENT
 ## LOG 001 - INITIAL OBSERVATION & MANIFESTATION
 
 **Classification:** RESTRICTED  
@@ -851,6 +851,6 @@ The very last journal entry, dated the day Atlas disappeared:
 
 *Goodbye.*
 
-*- Atlas Alure, Last Entry"*\`,
+*- Atlas Alure, Last Entry"*`,
   redactedSections: [],
 };
