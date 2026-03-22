@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { LOGS, SECRET_LOG_CALLIOPE } from '../data/logs';
 import { useAuth } from '../context/AuthContext';
+import { sha256 } from '../utils/hash';
 import LogEntry from './LogEntry';
 import TerminalConsole from './TerminalConsole';
 import HackingMinigame from './HackingMinigame';
@@ -60,16 +61,17 @@ const DashboardPage = () => {
     return result;
   }, [searchTerm, filterClass, filterType, unlockedCategories]);
 
-  const handleCommand = (cmd) => {
+  const handleCommand = async (cmd) => {
     if (isPasswordMode) {
-      if (cmd.toLowerCase() === 'ophelia') {
+      // SHA-256("ophelia")
+      const hash = await sha256(cmd.toLowerCase());
+      if (hash === '1e299e1540a7c67837a3bac1c78904064dc4ee9893ff42361525f49e703ed12c') {
         if (!unlockedCategories.includes('CALLIOPE')) {
           setUnlockedCategories(prev => [...prev, 'CALLIOPE']);
         }
         setSearchTerm('Soul Core');
         setIsPasswordMode(false);
       } else {
-        // Simple error feedback could go here, for now just exit password mode or keep trying
         setIsPasswordMode(false);
       }
       return;

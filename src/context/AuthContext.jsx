@@ -1,12 +1,14 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { VALID_CREDENTIALS } from '../data/credentials';
+import { sha256 } from '../utils/hash';
 
 const AuthContext = createContext();
 
 export const useAuth = () => useContext(AuthContext);
 
+// SHA-256("Hummingbird") — Osyluth master override
 const OSYLUTH_NAME = 'heriot, osyluth';
-const OSYLUTH_PASSWORD = 'Hummingbird';
+const OSYLUTH_PASS_HASH = 'c84c951192c3a51197845ed4661b8907a87e8dbe418fa975e8acd53bbb725733';
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -26,14 +28,18 @@ export const AuthProvider = ({ children }) => {
     setLoading(false);
   }, []);
 
-  const login = (name, password, locationKey) => {
+  const login = async (name, password, locationKey) => {
     const normalizedInputName = name.trim().toLowerCase();
+    const [passHash, locHash] = await Promise.all([
+      sha256(password),
+      sha256(locationKey),
+    ]);
 
     // Osyluth master override path
     if (
       normalizedInputName === OSYLUTH_NAME &&
-      password === OSYLUTH_PASSWORD &&
-      locationKey === VALID_CREDENTIALS.locationKey
+      passHash === OSYLUTH_PASS_HASH &&
+      locHash === VALID_CREDENTIALS.locationKeyHash
     ) {
       setIsOsyluth(true);
       setErrorVisible(false);
@@ -48,8 +54,8 @@ export const AuthProvider = ({ children }) => {
 
     if (
       isNameValid &&
-      password === VALID_CREDENTIALS.password &&
-      locationKey === VALID_CREDENTIALS.locationKey
+      passHash === VALID_CREDENTIALS.passwordHash &&
+      locHash === VALID_CREDENTIALS.locationKeyHash
     ) {
       setIsAuthenticated(true);
       setErrorVisible(false);

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import MinigameMemory from './MinigameMemory';
 import MinigameBreach from './MinigameBreach';
+import { sha256 } from '../utils/hash';
 
 const ROOMS = [
   'ENTRANCE HALL', 'CUSTODIANS ROOM', 'STUDY HALL', 'TOILETS',
@@ -53,14 +54,16 @@ const OverrideConsole = ({ facilityState, setFacilityState, sessionStart, preloa
     return n;
   };
 
-  const handleCommand = (raw) => {
+  const handleCommand = async (raw) => {
     const trimmed = raw.trim();
     if (!trimmed) return;
 
     // Intercept auth_unlock_key password prompt
     if (awaitingAuthKey) {
       push([{ cls: 'cmd-line', text: `AAVL://MASTER > ••••••••` }]);
-      if (trimmed === 'Nine by Nine') {
+      // SHA-256("Nine by Nine")
+      const hash = await sha256(trimmed);
+      if (hash === '6159c6449f41ef5f09e96193be572cca7151de8a48115892249b7b1658df47aa') {
         push([{ cls: 'success-line', text: '>> ACCESS PHRASE ACCEPTED. INITIATING CRYPTOGRAPHIC SEQUENCE.' }]);
         setAwaitingAuthKey(false);
         setMinigame('memory');

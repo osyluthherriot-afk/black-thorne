@@ -44,9 +44,9 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login(formData.name, formData.password, formData.locationKey);
+    await login(formData.name, formData.password, formData.locationKey);
   };
 
   if (errorVisible) {
