@@ -2,9 +2,10 @@ import React from 'react';
 import { useAuth } from './context/AuthContext';
 import LoginPage from './components/LoginPage';
 import DashboardPage from './components/DashboardPage';
+import OsyluthOverridePage from './components/OsyluthOverridePage';
 
 const AppContent = () => {
-  const { isAuthenticated, loading } = useAuth();
+  const { isAuthenticated, isOsyluth, loading } = useAuth();
 
   if (loading) {
     return (
@@ -17,6 +18,7 @@ const AppContent = () => {
     );
   }
 
+  if (isOsyluth) return <OsyluthOverridePage />;
   return isAuthenticated ? <DashboardPage /> : <LoginPage />;
 };
 
