@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAuth } from './context/AuthContext';
 import LoginPage from './components/LoginPage';
 import DashboardPage from './components/DashboardPage';
@@ -20,33 +20,7 @@ const AppContent = () => {
   return isAuthenticated ? <DashboardPage /> : <LoginPage />;
 };
 
-const APP_VERSION = 2; // Current client version
-
 function App() {
-  useEffect(() => {
-    // Check version every 20 seconds
-    const checkVersion = async () => {
-      try {
-        // Append timestamp to bust cache
-        const response = await fetch(`/version.json?t=${new Date().getTime()}`);
-        if (!response.ok) return;
-        
-        const data = await response.json();
-        // If the server's version is strictly greater than the client's version, hard reload
-        if (data.version && data.version > APP_VERSION) {
-          console.log('Update detected. Forcing client refresh...');
-          window.location.reload(true);
-        }
-      } catch (err) {
-        // Silently ignore network errors (e.g. offline)
-      }
-    };
-    
-    checkVersion();
-    const interval = setInterval(checkVersion, 20000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="App selection:bg-red-900 selection:text-white">
       <AppContent />
