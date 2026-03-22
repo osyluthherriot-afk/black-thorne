@@ -6,6 +6,7 @@ const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
 const OSYLUTH_NAME = 'heriot, osyluth';
+const OSYLUTH_PASSWORD = 'Hummingbird';
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -31,7 +32,7 @@ export const AuthProvider = ({ children }) => {
     // Osyluth master override path
     if (
       normalizedInputName === OSYLUTH_NAME &&
-      password === VALID_CREDENTIALS.password &&
+      password === OSYLUTH_PASSWORD &&
       locationKey === VALID_CREDENTIALS.locationKey
     ) {
       setIsOsyluth(true);

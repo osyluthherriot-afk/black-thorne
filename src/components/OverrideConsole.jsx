@@ -30,8 +30,9 @@ const fmtTime = (s) => {
 const OverrideConsole = ({ facilityState, setFacilityState, sessionStart, preloadLog }) => {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState([]);
-  const [minigame, setMinigame] = useState(null); // null | 'memory' | {type:'breach', room}
+  const [minigame, setMinigame] = useState(null);
   const [commsMsg, setCommsMsg] = useState(null);
+  const [awaitingAuthKey, setAwaitingAuthKey] = useState(false);
   const [sessionLog, setSessionLog] = useState(preloadLog || [
     { time: 0, text: 'LOGIN — HERIOT, OSYLUTH' },
   ]);
@@ -55,6 +56,22 @@ const OverrideConsole = ({ facilityState, setFacilityState, sessionStart, preloa
   const handleCommand = (raw) => {
     const trimmed = raw.trim();
     if (!trimmed) return;
+
+    // Intercept auth_unlock_key password prompt
+    if (awaitingAuthKey) {
+      push([{ cls: 'cmd-line', text: `AAVL://MASTER > ••••••••` }]);
+      if (trimmed === 'Nine by Nine') {
+        push([{ cls: 'success-line', text: '>> ACCESS PHRASE ACCEPTED. INITIATING CRYPTOGRAPHIC SEQUENCE.' }]);
+        setAwaitingAuthKey(false);
+        setMinigame('memory');
+      } else {
+        push([{ cls: 'error-line', text: '>> INVALID ACCESS PHRASE. COMMAND ABORTED.' }]);
+        log('/auth_unlock_key — AUTH FAILED');
+        setAwaitingAuthKey(false);
+      }
+      return;
+    }
+
     push([{ cls: 'cmd-line', text: `AAVL://MASTER > ${trimmed}` }]);
 
     const parts = trimmed.split(' ');
@@ -179,8 +196,9 @@ const OverrideConsole = ({ facilityState, setFacilityState, sessionStart, preloa
         break;
 
       case '/auth_unlock_key':
-        push([{ cls: 'response-line', text: '>> CRYPTOGRAPHIC SEQUENCE INITIATED. MEMORIZE PATTERN.' }]);
-        setMinigame('memory');
+        push([{ cls: 'response-line', text: '>> AUTH_UNLOCK_KEY: SECONDARY PASSPHRASE REQUIRED.' }]);
+        push([{ cls: 'dim-line', text: '>> ENTER ACCESS PHRASE:' }]);
+        setAwaitingAuthKey(true);
         break;
 
       case '/breach': {
@@ -203,6 +221,9 @@ const OverrideConsole = ({ facilityState, setFacilityState, sessionStart, preloa
     }
   };
 
+  const inputPlaceholder = awaitingAuthKey ? 'enter access phrase...' : 'type /help';
+  const inputType = awaitingAuthKey ? 'password' : 'text';
+
   return (
     <div>
       {/* Comms overlay */}
@@ -224,10 +245,11 @@ const OverrideConsole = ({ facilityState, setFacilityState, sessionStart, preloa
         <input
           className="override-console-input"
           style={{ border: 'none', flexGrow: 1 }}
+          type={inputType}
           value={input}
           onChange={e => setInput(e.target.value)}
           onKeyDown={onKey}
-          placeholder="type /help"
+          placeholder={inputPlaceholder}
           spellCheck={false}
           autoComplete="off"
         />
